@@ -14,7 +14,7 @@
 	</requires>
 	<requires>
 		<type>plugin</type>
-		<name>evan</type>
+		<name>evan</name>
 		<version>1.0</version>
 	</requires>
 </plugin_manifest>

@@ -4,13 +4,6 @@ function showcase_init() {
 	//general
 	elgg_register_entity_type("object", 'showcase');
 
-	//menus
-	elgg_register_menu_item("site", array(
-		"name" => 'showcase',
-		"text" => elgg_echo('showcase'),
-		"href" => "/showcase",
-	));
-
 	elgg_register_admin_menu_item('administer', 'pending', 'showcase');
 	elgg_register_admin_menu_item('administer', 'featured', 'showcase');
 
