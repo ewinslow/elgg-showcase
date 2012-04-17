@@ -60,14 +60,7 @@ $categories = array(
 	<?php echo elgg_view('input/tags', $tags); ?>
 </div>
 
-<?php if (elgg_is_active_plugin('categories')): ?>
-<div>
-	<label for="showcase_categories"><?php echo elgg_echo('categories'); ?></label>
-	<?php echo elgg_view('input/categories', $categories); ?>
-</div>
-<?php endif; ?>
-
-<div>
+<div class="elgg-foot">
 <?php
 	echo elgg_view('input/hidden', array('name' => 'container_guid', 'value' => 1));
 	echo elgg_view('input/hidden', array('name' => 'guid', 'value' => $showcase->guid));

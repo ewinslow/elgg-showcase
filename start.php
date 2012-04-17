@@ -18,10 +18,10 @@ function showcase_init() {
 
 
 	//actions
-	$actions_base = "$root/actions/object/showcase";
-	elgg_register_action("object/showcase/add", "$actions_base/save.php", 'admin');
-	elgg_register_action("object/showcase/edit", "$actions_base/save.php", 'admin');
-	elgg_register_action("object/showcase/delete", "$actions_base/delete.php", 'admin');
+	$actions_base = "$root/actions/showcase";
+	elgg_register_action("showcase/add", "$actions_base/save.php");
+	elgg_register_action("showcase/edit", "$actions_base/save.php");
+	elgg_register_action("showcase/delete", "$actions_base/delete.php");
 
 	//handlers
 	elgg_register_page_handler($slug, 'showcase_page_handler');

@@ -4,19 +4,17 @@
 	<author>Evan Winslow</author>
 	<version>1.8</version>
 	<category>content</category>
-	<blurb>Showcase plugin</blurb>
-	<description>Show off the websites that are using your product.</description>
-	<website>http://evanwinslow.com/</website>
-	<copyright>(C) 2011 Evan Winslow</copyright>
+	<description>Show off implementations/uses of your product.</description>
+	<website>http://ewinslow.com/</website>
+	<copyright>(C) 2011-12 Evan Winslow</copyright>
 	<license>GNU Public License version 2</license>
 	<requires>
-		<type>elgg_version</type>
-		<version>2010030101</version>
+		<type>elgg_release</type>
+		<version>1.8.3</version>
 	</requires>
 	<requires>
 		<type>plugin</type>
-		<name>quickstart</name>
-		<version>1.8</version>
+		<name>evan</type>
+		<version>1.0</version>
 	</requires>
-	<admin_interface>simple</admin_interface>
 </plugin_manifest>
