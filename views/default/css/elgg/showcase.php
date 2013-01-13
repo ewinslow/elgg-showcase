@@ -5,6 +5,11 @@
     overflow: hidden;
 }
 
+.elgg-showcase-item img {
+	max-width: 100%;
+	height: auto;
+}
+
 .elgg-showcase-title {
     padding: 0;
 }
