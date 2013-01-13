@@ -14,10 +14,15 @@
     padding: 0;
 }
 
+.elgg-showcase-title > a:hover {
+	color: inherit;
+}
+
 .elgg-showcase-info {
     background: #333;
     background: rgba(0, 0, 0, .5);
     box-sizing: border-box;
+    color: white;
     height: 100%;
     left: 0;
     padding: 1em;
