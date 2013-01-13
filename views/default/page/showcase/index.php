@@ -23,7 +23,15 @@
         <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/plugins/prefixfree.dynamic-dom.min.js"></script>
     </head>
     <body>
-        <div class="elgg-page elgg-page-default">
+        <?php if (elgg_is_logged_in()) { ?>
+	<div class="elgg-page-topbar">
+		<div class="elgg-inner">
+			<?php echo elgg_view('page/elements/topbar', $vars); ?>
+		</div>
+	</div>
+	<?php } ?>
+
+	<div class="elgg-page elgg-page-default">
             
             <div class="elgg-page-header">
                 <div class="elgg-inner">
@@ -74,9 +82,9 @@
         <script>
             require.config({
                 paths: {
-                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js",
-                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js",
-                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js",
+                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min",
+                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min",
+                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min",
                 },
                 shim: {
                     'angular': {
@@ -91,7 +99,7 @@
             });
             
             require(['angular', 'angular-sanitize'], function(angular) {
-                angular.boostrap(document, ['ngSanitize']);
+                angular.bootstrap(document, ['ngSanitize']);
             });
         
             function ElggShowcase($scope) {
