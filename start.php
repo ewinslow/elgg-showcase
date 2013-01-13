@@ -20,10 +20,11 @@ function showcase_init() {
     
     elgg_register_page_handler('showcase', 'showcase_page_handler');
     
-    elgg_register_menu_item('site', array(
+    elgg_register_menu_item('site', ElggMenuItem::factory(array(
         'name' => 'showcase',
         'href' => '/showcase',
-    ));
+        'text' => elgg_echo('showcase'),
+    )));
 }
 
 function showcase_page_handler() {
