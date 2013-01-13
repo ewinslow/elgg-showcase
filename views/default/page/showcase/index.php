@@ -1,5 +1,10 @@
+<?php
+/**
+ * This page must be included by the Elgg engine or it will not work.
+ */
+?>
 <!DOCTYPE html>
-<html ng-app="elggShowcase">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,35 +12,76 @@
         <meta name="description" content="A place to show off social networks and websites powered by Elgg.">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg'); ?>" />
+        <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/gallery/showcase'); ?>" />
+        <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/showcase'); ?>" />
+        
+        
+        <?php // We actually do want this script in the head because it changes the behavior of the CSS ?>
+        <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+        <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/plugins/prefixfree.dynamic-dom.min.js"></script>
     </head>
     <body>
-        <div class="elgg-page-header">
-            <h1>
-                Elgg Showcase
-                <small>Social networks and websites powered by Elgg</small>
-            </h1>
-        </div>
-        <ul class="elgg-gallery elgg-gallery-showcase" ng-controller="ElggShowcase">
-            <li ng-repeat="item in items">
-                <div class="elgg-showcase-item">
-                    <img ng-src="{{item.image.src}}" />
-                    <div class="elgg-showcase-info">
-                        <h2 class="elgg-showcase-title">
-                            <a href="{{item.targetUrl}}">
-                                {{item.displayName}}
-                            </a>
-                        </h2>
-                        <p>{{item.summary}}</p>
-                    </div>
+        <div class="elgg-page elgg-page-default">
+            
+            <div class="elgg-page-header">
+                <div class="elgg-inner">
+                    <?php echo elgg_view('page/elements/header', $vars); ?>
                 </div>
-            </li>
-        </ul>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js"></script>
-        <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+            </div>
+            
+            <div class="elgg-page-body">
+                <div class="elgg-inner">
+                    <h2 class="elgg-heading-main">
+                        <?php echo elgg_echo('showcase'); ?>
+                    </h2>
+                    <ul class="elgg-gallery elgg-gallery-showcase" ng-controller="ElggShowcase">
+                        <li ng-repeat="item in items">
+                            <div class="elgg-showcase-item">
+                                <img ng-src="/mod/showcase/assets/images/{{item.image.src}}" />
+                                <div class="elgg-showcase-info">
+                                    <h2 class="elgg-showcase-title">
+                                        <a href="{{item.targetUrl}}">
+                                            {{item.displayName}}
+                                        </a>
+                                    </h2>
+                                    <p>{{item.summary}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="elgg-page-footer">
+                <div class="elgg-inner">
+                    <?php echo elgg_view('page/elements/footer', $vars); ?>
+                </div>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.1/require.min.js"></script>
         <script>
-            angular.module('elggShowcase', ['ngSanitize']);
+            require.config({
+                paths: {
+                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js",
+                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js",
+                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js",
+                },
+                shim: {
+                    'angular': {
+                        deps: ['jquery'],
+                        exports: 'angular',
+                    },
+                    'angular-sanitize': {
+                        deps: ['angular'],
+                    },
+                },
+                waitSeconds: 15,
+            });
+            
+            require(['angular', 'angular-sanitize'], function(angular) {
+                angular.boostrap(document, ['ngSanitize']);
+            });
         
             function ElggShowcase($scope) {
                 $scope.items = [{

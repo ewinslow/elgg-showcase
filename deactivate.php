@@ -1,1 +1,1 @@
-remove_subtype('object', 'showcase', 'ElggShowcase');
+update_subtype('object', 'showcase', '');
