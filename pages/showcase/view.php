@@ -5,7 +5,6 @@
  * @package Showcase
  */
 
-
 $showcase = get_entity(get_input('guid'));
 
 $title = $showcase->title;

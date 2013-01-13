@@ -11,13 +11,14 @@
         <title>Elgg Showcase</title>
         <meta name="description" content="A place to show off social networks and websites powered by Elgg.">
         <meta name="viewport" content="width=device-width">
+        <?php echo elgg_view('page/elements/shortcut_icon'); ?>
 
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg'); ?>" />
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/gallery/showcase'); ?>" />
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/showcase'); ?>" />
         
         
-        <?php // We actually do want this script in the head because it changes the behavior of the CSS ?>
+        <?php /* We actually do want this script in the head because it changes the behavior of the CSS */ ?>
         <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
         <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/plugins/prefixfree.dynamic-dom.min.js"></script>
     </head>
@@ -32,24 +33,34 @@
             
             <div class="elgg-page-body">
                 <div class="elgg-inner">
-                    <h2 class="elgg-heading-main">
-                        <?php echo elgg_echo('showcase'); ?>
-                    </h2>
-                    <ul class="elgg-gallery elgg-gallery-showcase" ng-controller="ElggShowcase">
-                        <li ng-repeat="item in items">
-                            <div class="elgg-showcase-item">
-                                <img ng-src="/mod/showcase/assets/images/{{item.image.src}}" />
-                                <div class="elgg-showcase-info">
-                                    <h2 class="elgg-showcase-title">
-                                        <a href="{{item.targetUrl}}">
-                                            {{item.displayName}}
-                                        </a>
-                                    </h2>
-                                    <p>{{item.summary}}</p>
-                                </div>
+                    <div class="elgg-layout elgg-layout-one-column">
+                        <div class="elgg-main elgg-body">
+                            <div class="elgg-head">
+                                <h2 class="elgg-heading-main">
+                                    <?php echo elgg_echo('showcase'); ?>
+                                </h2>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="elgg-body">
+                                <ul class="elgg-gallery elgg-gallery-showcase" data-ng-controller="ElggShowcase">
+                                    <li data-ng-repeat="item in items">
+                                        <div class="elgg-showcase-item">
+                                            <img data-ng-src="/mod/showcase/assets/images/{{item.image.src}}" />
+                                            <div class="elgg-showcase-info">
+                                                <h2 class="elgg-showcase-title">
+                                                    <a href="{{item.targetUrl}}">
+                                                        {{item.displayName}}
+                                                    </a>
+                                                </h2>
+                                                <p>{{item.summary}}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End layout body -->
+                        </div>
+                    </div>
+                    <!-- End page body content -->
                 </div>
             </div>
             
