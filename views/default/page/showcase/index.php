@@ -51,17 +51,15 @@
                             <div class="elgg-body">
                                 <ul class="elgg-gallery elgg-gallery-showcase" data-ng-controller="ElggShowcase">
                                     <li data-ng-repeat="item in items">
-                                        <div class="elgg-showcase-item">
+                                        <a href="{{item.targetUrl}}" class="elgg-showcase-item">
                                             <img data-ng-src="/mod/showcase/assets/images/{{item.image.src}}" />
                                             <div class="elgg-showcase-info">
                                                 <h2 class="elgg-showcase-title">
-                                                    <a href="{{item.targetUrl}}">
-                                                        {{item.displayName}}
-                                                    </a>
+                                                    {{item.displayName}}
                                                 </h2>
                                                 <p>{{item.summary}}</p>
                                             </div>
-                                        </div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

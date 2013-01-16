@@ -1,5 +1,6 @@
 /* <style> /**/
 .elgg-showcase-item {
+    display: block;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -20,7 +21,7 @@
 
 .elgg-showcase-info {
     background: #333;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .85);
     box-sizing: border-box;
     color: white;
     height: 100%;
