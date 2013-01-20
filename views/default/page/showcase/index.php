@@ -86,7 +86,7 @@
             });
             
             require(['angular', 'angular-sanitize'], function(angular) {
-                angular.boostrap(document, ['ngSanitize']);
+                angular.bootstrap(document, ['ngSanitize']);
             });
         
             function ElggShowcase($scope) {
