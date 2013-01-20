@@ -16,11 +16,6 @@
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg'); ?>" />
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/gallery/showcase'); ?>" />
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/showcase'); ?>" />
-        
-        
-        <?php /* We actually do want this script in the head because it changes the behavior of the CSS */ ?>
-        <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
-        <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/plugins/prefixfree.dynamic-dom.min.js"></script>
     </head>
     <body>
         <div class="elgg-page elgg-page-default">
@@ -119,14 +114,14 @@
                 }, {
                     displayName: 'Planet Red',
                     summary: 'Social network for the University of Nebraska-Lincoln.',
-                    targetUrl: 'planetred.unl.edu',
+                    targetUrl: 'http://planetred.unl.edu',
                     image: {
                         src: 'planetred-screenshot.png'
                     },
                 }, {
                     displayName: 'Team Webgalli',
                     summary: 'Professional elgg developers and elgg consultants from India.',
-                    targetUrl: 'webgalli.com',
+                    targetUrl: 'http://webgalli.com',
                     image: {
                         src: 'webgalli-screenshot.png'
                     },
@@ -195,6 +190,7 @@
                     }
                 }];
             }
-        </script>        
+        </script>
+        <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
     </body>
 </html>
