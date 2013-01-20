@@ -69,9 +69,9 @@
         <script>
             require.config({
                 paths: {
-                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js",
-                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js",
-                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js",
+                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min",
+                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min",
+                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min",
                 },
                 shim: {
                     'angular': {
