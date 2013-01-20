@@ -18,15 +18,7 @@
         <link rel="stylesheet" href="<?php echo elgg_get_simplecache_url('css', 'elgg/showcase'); ?>" />
     </head>
     <body>
-        <?php if (elgg_is_logged_in()) { ?>
-	<div class="elgg-page-topbar">
-		<div class="elgg-inner">
-			<?php echo elgg_view('page/elements/topbar', $vars); ?>
-		</div>
-	</div>
-	<?php } ?>
-
-	<div class="elgg-page elgg-page-default">
+        <div class="elgg-page elgg-page-default">
             
             <div class="elgg-page-header">
                 <div class="elgg-inner">
@@ -46,15 +38,17 @@
                             <div class="elgg-body">
                                 <ul class="elgg-gallery elgg-gallery-showcase" data-ng-controller="ElggShowcase">
                                     <li data-ng-repeat="item in items">
-                                        <a href="{{item.targetUrl}}" class="elgg-showcase-item">
+                                        <div class="elgg-showcase-item">
                                             <img data-ng-src="/mod/showcase/assets/images/{{item.image.src}}" />
                                             <div class="elgg-showcase-info">
                                                 <h2 class="elgg-showcase-title">
-                                                    {{item.displayName}}
+                                                    <a href="{{item.targetUrl}}">
+                                                        {{item.displayName}}
+                                                    </a>
                                                 </h2>
                                                 <p>{{item.summary}}</p>
                                             </div>
-                                        </a>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -75,9 +69,9 @@
         <script>
             require.config({
                 paths: {
-                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min",
-                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min",
-                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min",
+                    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js",
+                    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js",
+                    "angular-sanitize": "//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js",
                 },
                 shim: {
                     'angular': {
@@ -92,7 +86,7 @@
             });
             
             require(['angular', 'angular-sanitize'], function(angular) {
-                angular.bootstrap(document, ['ngSanitize']);
+                angular.boostrap(document, ['ngSanitize']);
             });
         
             function ElggShowcase($scope) {
@@ -101,98 +95,98 @@
                     summary: 'Community support from community members.',
                     targetUrl: 'http://community.elgg.org',
                     image: {
-                        src: 'elgg-community-screenshot.png'
+                        src: 'elgg-community-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Health Education Africa Resource Team',
                     summary: 'Empowering the people of Africa to survive the HIV/AIDS pandemic.',
                     targetUrl: 'http://africaheart.org',
                     image: {
-                        src: 'africaheart-screenshot.png'
+                        src: 'africaheart-screenshot.jpg'
                     },
                 }, {
                     displayName: 'CourseWare',
                     summary: 'CourseWare is an online system that makes communication among course members more effective and efficient.',
                     targetUrl: 'https://courseware.stanford.edu',
                     image: {
-                        src: 'courseware-screenshot.png'
+                        src: 'courseware-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Planet Red',
                     summary: 'Social network for the University of Nebraska-Lincoln.',
                     targetUrl: 'http://planetred.unl.edu',
                     image: {
-                        src: 'planetred-screenshot.png'
+                        src: 'planetred-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Team Webgalli',
                     summary: 'Professional elgg developers and elgg consultants from India.',
                     targetUrl: 'http://webgalli.com',
                     image: {
-                        src: 'webgalli-screenshot.png'
+                        src: 'webgalli-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Interfaith Family',
                     summary: 'Supporting interfaith families exploring Jewish life',
                     targetUrl: 'http://interfaithfamily.com/elgg',
                     image: {
-                        src: 'interfaithfamily-screenshot.png'
+                        src: 'interfaithfamily-screenshot.jpg'
                     },
                 }, {
                     displayName: 'CMC Alumni',
                     summary: 'To connect and unite the past and present students of CMC Cochin.',
                     targetUrl: 'http://cmccochin.org/alumni',
                     image: {
-                        src: 'cmc-alumni-screenshot.png'
+                        src: 'cmc-alumni-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Hedgehogs.net',
                     summary: 'A social application platform for the hedge fund and investment community.',
                     targetUrl: 'http://hedgehogs.net',
                     image: {
-                        src: 'hedgehogs-screenshot.png'
+                        src: 'hedgehogs-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Alianza Arboles',
                     summary: 'A network that brings together individuals and organizations with the common goal of planting trees.',
                     targetUrl: 'http://alianzaarboles.com',
                     image: {
-                        src: 'alianzaarboles-screenshot.png'
+                        src: 'alianzaarboles-screenshot.jpg'
                     }
                 }, {
                     displayName: 'N-1',
                     summary: 'Autonomous social network for social movements with emphasis on security, privacy and federation.',
                     targetUrl: 'https://n-1.cc',
                     image: {
-                        src: 'n-1-screenshot.png'
+                        src: 'n-1-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Formavia',
                     summary: 'Regional professional network (Rhône-Alpes, France), ICT and lifelong learning.',
                     targetUrl: 'http://id.formavia.fr/',
                     image: {
-                        src: 'formavia-screenshot.png'
+                        src: 'formavia-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Fing',
                     summary: 'Social network of the Fondation Internet Nouvelle Génération.',
                     targetUrl: 'http://www.reseaufing.org/',
                     image: {
-                        src: 'reseaufing-screenshot.png'
+                        src: 'reseaufing-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Athabasca Landing',
                     summary: 'A social site for staff, students and friends of Athabasaca University, Canada\'s open university',
                     targetUrl: 'https://landing.athabascau.ca/',
                     image: {
-                        src: 'athabasca-screenshot.png'
+                        src: 'athabasca-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Guinea pigs and hamsters',
                     summary: 'Social Network for guinea pigs and hamster lovers.',
                     targetUrl: 'http://guineapigsandhamsters.com',
                     image: {
-                        src: 'guineapigs-screenshot.png'
+                        src: 'guineapigs-screenshot.jpg'
                     }
                 }];
             }
