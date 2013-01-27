@@ -147,13 +147,6 @@
                         src: 'hedgehogs-screenshot.jpg'
                     }
                 }, {
-                    displayName: 'Alianza Arboles',
-                    summary: 'A network that brings together individuals and organizations with the common goal of planting trees.',
-                    targetUrl: 'http://alianzaarboles.com',
-                    image: {
-                        src: 'alianzaarboles-screenshot.jpg'
-                    }
-                }, {
                     displayName: 'N-1',
                     summary: 'Autonomous social network for social movements with emphasis on security, privacy and federation.',
                     targetUrl: 'https://n-1.cc',
