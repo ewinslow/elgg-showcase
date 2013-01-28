@@ -39,7 +39,7 @@
                                 <ul class="elgg-gallery elgg-gallery-showcase" data-ng-controller="ElggShowcase">
                                     <li data-ng-repeat="item in items">
                                         <div class="elgg-showcase-item">
-                                            <img data-ng-src="/mod/showcase/assets/images/{{item.image.src}}" />
+                                            <img data-ng-src="/mod/showcase/assets/images/{{item.image.url}}" />
                                             <div class="elgg-showcase-info">
                                                 <h2 class="elgg-showcase-title">
                                                     <a href="{{item.targetUrl}}">
@@ -95,93 +95,128 @@
                     summary: 'Community support from community members.',
                     targetUrl: 'http://community.elgg.org',
                     image: {
-                        src: 'elgg-community-screenshot.jpg'
+                        url: 'elgg-community-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Health Education Africa Resource Team',
                     summary: 'Empowering the people of Africa to survive the HIV/AIDS pandemic.',
                     targetUrl: 'http://africaheart.org',
                     image: {
-                        src: 'africaheart-screenshot.jpg'
+                        url: 'africaheart-screenshot.jpg'
                     },
                 }, {
                     displayName: 'CourseWare',
                     summary: 'CourseWare is an online system that makes communication among course members more effective and efficient.',
                     targetUrl: 'https://courseware.stanford.edu',
                     image: {
-                        src: 'courseware-screenshot.jpg'
+                        url: 'courseware-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Planet Red',
                     summary: 'Social network for the University of Nebraska-Lincoln.',
                     targetUrl: 'http://planetred.unl.edu',
                     image: {
-                        src: 'planetred-screenshot.jpg'
+                        url: 'planetred-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Team Webgalli',
                     summary: 'Professional elgg developers and elgg consultants from India.',
                     targetUrl: 'http://webgalli.com',
                     image: {
-                        src: 'webgalli-screenshot.jpg'
+                        url: 'webgalli-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Interfaith Family',
                     summary: 'Supporting interfaith families exploring Jewish life',
                     targetUrl: 'http://interfaithfamily.com/elgg',
                     image: {
-                        src: 'interfaithfamily-screenshot.jpg'
+                        url: 'interfaithfamily-screenshot.jpg'
                     },
                 }, {
                     displayName: 'CMC Alumni',
                     summary: 'To connect and unite the past and present students of CMC Cochin.',
                     targetUrl: 'http://cmccochin.org/alumni',
                     image: {
-                        src: 'cmc-alumni-screenshot.jpg'
+                        url: 'cmc-alumni-screenshot.jpg'
                     },
                 }, {
                     displayName: 'Hedgehogs.net',
                     summary: 'A social application platform for the hedge fund and investment community.',
                     targetUrl: 'http://hedgehogs.net',
                     image: {
-                        src: 'hedgehogs-screenshot.jpg'
+                        url: 'hedgehogs-screenshot.jpg'
                     }
                 }, {
                     displayName: 'N-1',
                     summary: 'Autonomous social network for social movements with emphasis on security, privacy and federation.',
                     targetUrl: 'https://n-1.cc',
                     image: {
-                        src: 'n-1-screenshot.jpg'
+                        url: 'n-1-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Formavia',
                     summary: 'Regional professional network (Rhône-Alpes, France), ICT and lifelong learning.',
                     targetUrl: 'http://id.formavia.fr/',
                     image: {
-                        src: 'formavia-screenshot.jpg'
+                        url: 'formavia-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Fing',
                     summary: 'Social network of the Fondation Internet Nouvelle Génération.',
                     targetUrl: 'http://www.reseaufing.org/',
                     image: {
-                        src: 'reseaufing-screenshot.jpg'
+                        url: 'reseaufing-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Athabasca Landing',
                     summary: 'A social site for staff, students and friends of Athabasaca University, Canada\'s open university',
                     targetUrl: 'https://landing.athabascau.ca/',
                     image: {
-                        src: 'athabasca-screenshot.jpg'
+                        url: 'athabasca-screenshot.jpg'
                     }
                 }, {
                     displayName: 'Guinea pigs and hamsters',
                     summary: 'Social Network for guinea pigs and hamster lovers.',
                     targetUrl: 'http://guineapigsandhamsters.com',
                     image: {
-                        src: 'guineapigs-screenshot.jpg'
+                        url: 'guineapigs-screenshot.jpg'
                     }
-                }];
+                }, {
+		    displayName: 'Vazco',
+		    summary: 'Professional Elgg developers from Poland, with articles about optimizing Elgg',
+		    targetUrl: 'http://vazco.eu',
+		    image: {
+		        url: 'vazco-screenshot.jpg'
+		    }
+		}, {
+		    displayName: 'Spotwork',
+		    summary: 'A french community for professionals seeking a place to show their skills',
+		    targetUrl: 'http://spotwork.fr',
+		    image: {
+		        url: 'spotwork-screenshot.jpg'
+		    }
+		}, {
+		    displayName: 'bauintelligenz (Intranet)',
+		    summary: 'Construction site management platform, with interactive timeline',
+		    targetUrl: '',
+		    image: {
+		        url: 'bauintelligenz-screenshot.jpg'
+		    }
+		}, {
+		    displayName: 'ExerciseFriends',
+		    summary: 'A website for people searching for a training partner, with 150k registered users',
+		    targetUrl: 'http://exercisefriends.com',
+		    image: {
+		        url: 'exercisefriends-screenshot.jpg'
+		    }
+		}, {
+		    displayName: "MGO",
+		    summary: 'A private community of people who share the same passion about golf around the world',
+		    targetUrl: 'http://www.mgogolf.com/',
+		    image: {
+		        url: 'mgogolf-screenshot.jpg'
+		    }
+		}];
             }
         </script>
         <script src="//raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
